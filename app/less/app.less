@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Grand+Hotel);
+
+html, body {
+  height: 100%;
+}
+body {
+  background-image: url('/img/bg2.png');
+  background-size: cover;
+}
+.container > a { color: #cccccc; text-align: center;}
+.container > h1 {
+  text-align: center;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 3em;
+  color: #afafaf;
+  text-shadow: 2px 1px 12px black;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);}
+
+.nav {
+  padding: 10px;
+  max-width: 900px;
+  text-align: right;
+  margin: auto;
+  margin-top: 5px;
+  span {
+    margin-right: 10px;
+  }
+  a { color: #9a9a9a; font-size: 1.4em; text-decoration: none;}
+  a:hover { text-decoration: underline; color: #fafafa; }
+}
+.container {
+  padding: 10px;
+  background-color: rgba(255,255,255,0.9);
+  background-image: url('/img/bg.png');
+  background-size: cover;
+  color: #afafaf;
+
+  max-width: 900px;
+  height: 80%;
+  margin: auto;
+  overflow: scroll;
+  border-radius: 15px;
+}
+
+
+table {
+  padding: 14px;
+  border-radius: 10px;
+  background-color: rgba(100,100,100,0.2);
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 1px;
+  tbody, tr, td {
+    border-radius: 3px;
+  }
+  th {
+//    font-family: 'Grand Hotel', cursive;
+    font-size: 1.2em;
+  }
+  td {
+    color: #333333;
+    text-shadow: 1px 0px 3px #bbbbbb;
+    padding: 5px;
+    min-width: 90px;
+    text-align: center;
+  }
+  button {
+    border-radius: 30%;
+    background-color: rgba(200,30,20,0.9);
+    font-size: 0.6em;
+    box-shadow: 1px 1px 3px black;
+    border: none;
+  }
+}
+
+.form-container {
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  input, button {
+    padding: 3px;
+    margin: 5px;
+    border-radius: 10px;
+    color: #333333;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+  background-color: #555555 !important;
+  color: #efefef;
+}
+.ongoing {
+}
+.priority-link, .th-link {
+  text-decoration: none;
+}
+.th-link { color: #af9fcf; }
+.th-link:hover {color: #5555f5; }
+.priority-link { color: #3f3f3f; }
+.priority-link:hover {
+  text-decoration: underline;
+  color: #1050a0;
+}

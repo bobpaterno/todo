@@ -1,0 +1,38 @@
+extends ../shared/template
+
+block content
+  h1 to do list
+
+  .form-container
+    form(method='POST' action='/tasks')
+      input(name='title' type='text' placeholder='Title' autofocus='true')
+      input(name='due' type='Date')
+      select(name='priorityId')
+        each p in priorities
+          option(value=p._id)= p.name
+      button Add
+
+  .table-container
+    table
+      thead
+        tr
+          th Completed
+          th: a.th-link(href='/tasks/sort/title') Title
+          th: a.th-link(href='/tasks/sort/date') Due
+          th Priority
+          th Delete
+      tbody
+        each t in tasks
+          tr(style='background-color:#{t.priority.color}' class=t.isComplete ? 'done' : 'ongoing')
+            td
+              form.task(method='POST' action='/tasks/#{t._id}')
+                input(type='hidden' name='_method' value='PUT')
+                input(type='checkbox' checked=t.isComplete)
+
+            td= t.title
+            td= t.due.toDateString()
+            td: a.priority-link(href='/tasks/filter/#{t.priorityId}')= t.priority.name
+            td
+              form(action='/tasks/#{t._id}' method='POST')
+                input(type='hidden' name='_method' value='DELETE')
+                button x
